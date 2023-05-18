@@ -1,24 +1,29 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 let name = "talha";
 function App() {
   return (
     <>
-      <nav>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>I
-      </nav>
-      <div className="container">
-        <h1>Hello {name}</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-          voluptates vel natus omnis! Tempore error odit nihil voluptatibus ut
-          porro similique in, quod, molestiae commodi animi rem doloremque illum
-          repellat itaque consequatur provident mollitia?
-        </p>
-      </div>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="/">TextUtils</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/">About</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
     </>
   );
 }
