@@ -7,12 +7,15 @@ export default function TextForm(props) {
         let newText=text.toUpperCase();
         // console.log(newText);
         setText(newText);
+        props.showAlert("Converted to Uppercase","success");
     }
     const handleLoClick=()=>{
         // console.log("uppercase was clicked"+ text);
         let newText=text.toLowerCase();
         // console.log(newText);
         setText(newText);
+        props.showAlert("Converted to Lowercase","success");
+
     }
 
     const handleClearClick=()=>{
@@ -20,6 +23,8 @@ export default function TextForm(props) {
       let newText="";
       // console.log(newText);
       setText(newText);
+      props.showAlert("Text Cleared","success");
+
   }
     const handleOnChange=(event)=>{
         // console.log("on changed");
@@ -30,6 +35,8 @@ export default function TextForm(props) {
       console.log("hi i am handle extra spaes");
       let newText=text.split(/[ ]+/);
       setText(newText.join(" "));
+      props.showAlert("Extra Spaces removed","success");
+
     }
 
     const handleCopy=()=>{
@@ -38,6 +45,8 @@ export default function TextForm(props) {
       text.select();
       text.setSelectionRange(0,9999);
       navigator.clipboard.writeText(text.value);
+      props.showAlert("Text Coppied","success");
+
     }
     const [text, setText]=useState('Enter Text Here');
     // setText("new Text");
@@ -60,7 +69,7 @@ export default function TextForm(props) {
 
 
     </div>
-    <div className="container my-5">
+    <div className="container my-5" style={{color: props.mode ==='dark'?'white':'black'}}>
         <h1>Your Text Summary</h1>
         <p>{text.split(" ").length} words,{text.length} characters</p>
         <p>{0.008 * text.split(" ").length} Minutes read</p>
