@@ -1,7 +1,7 @@
 // import logo from "./logo.svg";
 import React, { useState } from "react";
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
@@ -50,7 +50,7 @@ function App() {
           {/* <Switch> */}
          
             {/* <Route path="/about"> */}
-              <About />
+              {/* <About /> */}
             {/* </Route> */}
 
             {/* <Route path="/"> */}
