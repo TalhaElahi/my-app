@@ -5,7 +5,7 @@ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 let name = "talha";
 function App() {
@@ -38,7 +38,7 @@ function App() {
   };
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar
           title="textutilsssssssssssss"
           mode={mode}
@@ -47,25 +47,25 @@ function App() {
         />
         <div className="container">
           <Alert alert={alert} />
-          <Switch>
+          {/* <Switch> */}
          
-            <Route path="/about">
+            {/* <Route path="/about"> */}
               <About />
-            </Route>
+            {/* </Route> */}
 
-            <Route path="/">
+            {/* <Route path="/"> */}
               <TextForm
               showAlert={showAlert}
               heading="Enter the Text to Analyze"
               mode={mode}
             />
-            </Route>
+            {/* </Route> */}
 
             
             {/* <About /> */}
-          </Switch>
+          {/* </Switch> */}
         </div>
-      </Router>
+      {/* </Router> */}
       {/* 
 <Navbar/>  */}
     </>
